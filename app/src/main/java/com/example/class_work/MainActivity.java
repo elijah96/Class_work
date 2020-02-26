@@ -42,12 +42,17 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
 
+
                 }
             case R.id.tea:
                 Intent b = new Intent(Intent.ACTION_VIEW, Uri.parse(fb));
                 if (b.resolveActivity(getPackageManager()) != null) {
                     startActivity(b);
                 }
+            case R.id.listv:
+                startActivity(new Intent(this,list.class));
+                return true;
+
         }
          return super.onOptionsItemSelected(item);
         }
